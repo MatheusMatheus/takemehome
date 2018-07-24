@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("mulher-com-cachorro.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("gato.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("cachorro.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+blockquote {
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+.logos {
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">TAKE ME HOME</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <div class = 'descricao-app'>
+    </div>
+
+    </div class = 'tela'></div>
+    <h3 style="text-align:left;">Encontre um amigo</h3>
+    <p style="text-align:left;">Anuncie um animal filhote ou adulto para doação ou adote animais de todas as raças e porte pelo site ou aplicativo! Com o Take me Home você encontra, cachorros e gatos para doação. 
+Aguarde mais novidades em breve ...</p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: BLACK;">VAMOS DAR UM NOVO LAR A ELES</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <blockquote><p><cite>Um cão não precisa de carros modernos, palacetes ou roupas de grife. Símbolos de status não significam nada para ele. Um pedaço de madeira encontrado na praia serve. Um cão não julga os outros por sua cor, credo ou classe, mas por quem são por dentro. Um cão não se importa se você é rico ou pobre, educado ou analfabeto, inteligente ou burro. Se você lhe der seu coração, ele lhe dará o dele. (John Grogan)<cite></p></blockquote>
+    <p>Marley e Eu</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #000;font-weight:bold;">COM APOIO</span>
+    
+    </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#fff;text-align:center;padding:50px 80px;text-align: justify;">
+    <div class = "logos">
+        <img class = 'logo' src = "gdf.png" />
+        <img class = 'logo' src = "hills.png"/>
+        <img class = 'logo' src = "pedigree.png" />
+    </div>
+  </div>
+</div>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border"><a href = "https://www.apple.com/br/ios/app-store/" style="text-decoration:none;color:white">BAIXE AQUI!</a></span>
+  </div>
+</div>
+
+</body>
+</html>
