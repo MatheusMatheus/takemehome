@@ -2,7 +2,14 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
+
+* {
+   font-family: Verdana, Geneva, sans-serif;
+}
+
 body, html {
   height: 100%;
   margin: 0;
@@ -12,7 +19,6 @@ body, html {
 
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
-  opacity: 0.65;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,6 +89,21 @@ blockquote p {
     }
 }
 
+.descricao-app {
+   position: absolute;
+   width: 50%;
+   height: 50%;
+   border: 1px solid red;
+   left: 0;
+   background-color: blue;
+}
+.tela {
+   position: absolute;
+   right: 0;
+   top: -30px;
+   background-color: red;
+}
+
 .logos {
     text-align: center;
 }
@@ -92,6 +113,23 @@ blockquote p {
     height: 200px;
     z-index: 10;
 }
+
+.animation-left, .animation-right {
+  width:50%;
+  height:100%;
+  position: relative;
+  visibility: hidden;
+}
+
+.animation-left {
+  background-color: black;
+  float: left;
+}
+
+.animation-right {
+  background-color: white;
+  float: right;
+}
 </style>
 </head>
 <body>
@@ -99,35 +137,39 @@ blockquote p {
 <div class="bgimg-1">
   <div class="caption">
     <span class="border">TAKE ME HOME</span>
+    <p style = "color: white;font-size: 20px; font-weight:thin; text-shadow: 2px 2px #000;">Anuncie um pet para doação ou encontrar seu novo amigo</p>
   </div>
 </div>
 
-<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-    <div class = 'descricao-app'>
-    </div>
+<div style="color: white;background-color:transparent;text-align:center;text-align: justify;position:relative;width:100%;height: 300px;">
+<div class = "animation-left">  
+  <h3 style="padding: 10px;color:white;">Encontre um amigo</h3>
+        <p style="padding: 50px;">Anuncie um animal filhote ou adulto para doação ou adote animais de todas as raças e porte pelo site ou aplicativo! Com o Take me Home você encontra, cachorros e gatos para doação. 
+        Aguarde mais novidades em breve ... </p>
+  </div>
 
-    </div class = 'tela'></div>
-    <h3 style="text-align:left;">Encontre um amigo</h3>
-    <p style="text-align:left;">Anuncie um animal filhote ou adulto para doação ou adote animais de todas as raças e porte pelo site ou aplicativo! Com o Take me Home você encontra, cachorros e gatos para doação. 
-Aguarde mais novidades em breve ...</p>
+  <div class = "animation-right">
+     <img style = "width:140px;height:100%;position:absolute;left:100px;" src = "tela.png">
+     <img style = "width:140px;height:100%;position:absolute;right:100px;" src = "inicial.png">
+  </div>
 </div>
 
 <div class="bgimg-2">
   <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: BLACK;">VAMOS DAR UM NOVO LAR A ELES</span>
+    <span class="border" style="background-color:transparent;font-size:25px;color: white;text-shadow: 2px 2px #000;">VAMOS DAR UM NOVO LAR A ELES</span>
   </div>
 </div>
 
 <div style="position:relative;">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-    <blockquote><p><cite>Um cão não precisa de carros modernos, palacetes ou roupas de grife. Símbolos de status não significam nada para ele. Um pedaço de madeira encontrado na praia serve. Um cão não julga os outros por sua cor, credo ou classe, mas por quem são por dentro. Um cão não se importa se você é rico ou pobre, educado ou analfabeto, inteligente ou burro. Se você lhe der seu coração, ele lhe dará o dele. (John Grogan)<cite></p></blockquote>
+    <blockquote><p><cite>Um cão não precisa de carros modernos, palacetes ou roupas de grife. Símbolos de status não significam nada para ele. Um pedaço de madeira encontrado na praia serve. Um cão não julga os outros por sua cor, credo ou classe, mas por quem são por dentro. Um cão não se importa se você é rico ou pobre, educado ou não, inteligente ou não. Se você lhe der seu coração, ele lhe dará o dele. (John Grogan)<cite></p></blockquote>
     <p>Marley e Eu</p>
   </div>
 </div>
 
 <div class="bgimg-3">
   <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: #000;font-weight:bold;">COM APOIO</span>
+    <span class="border" style="background-color:transparent;font-size:25px;color: #fff;text-shadow: 2px 2px #000;">COM APOIO</span>
     
     </div>
 </div>
@@ -148,5 +190,22 @@ Aguarde mais novidades em breve ...</p>
   </div>
 </div>
 
+<script type="text/javascript" src = "jquery.js"></script>
+
+<script type"text/javascript">
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    if(scroll > 300 && scroll < 600) {
+      $(".animation-right").css("visibility", "visible");
+      $(".animation-left").css("visibility", "visible");
+      $(".animation-left").addClass("w3-container w3-center w3-animate-top");
+      
+      $(".animation-right").addClass("w3-container w3-center w3-animate-top");
+      
+      event.preventDefault();
+    }
+});
+
+</script>
 </body>
 </html>
